@@ -15,10 +15,12 @@ public class Appl {
         System.out.println(k / 3);
         System.out.println(k % 3);
         System.out.println(k++ < ++k);
+
         System.out.println(" _____Task #2_____");
         System.out.println("What is your name?");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
+        
         System.out.println("Hello, " + name);
     }
 }
