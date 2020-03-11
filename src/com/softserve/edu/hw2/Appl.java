@@ -8,6 +8,6 @@ public class Appl {
         int result2 =k++; // 
         
 
-        System.out.println("Result of k = "  + k );
+        System.out.println("Result2 of k = "  + k );
       }
   }
