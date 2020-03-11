@@ -5,8 +5,9 @@ public class Appl {
 
         int k=16;
       
-        int result =++k; // 
+        int result2 =k++; // 
+        
 
-        System.out.println("result of K = " + k);
+        System.out.println("Result of k = "  + k );
       }
   }
