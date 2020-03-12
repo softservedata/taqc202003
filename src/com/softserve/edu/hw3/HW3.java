@@ -5,10 +5,12 @@ import java.util.stream.Collectors;
 
 public class HW3 {
 
+    //change order of entered numbers
     public static void swapNumbers(int i, int j) {
         System.out.println("Swapped numbers: " + j + " " + i);
     }
 
+    //sort entered numbers in ascending order
     public static void sortNumbersAsc(double x, double y, double z) {
         double max = 0.0;
         if (x >= y) {
@@ -32,11 +34,12 @@ public class HW3 {
         }
     }
 
+    //find odd numbers among the entered
     public static void oddNumbers (int arr[]) {
         String res = "";
         String el;
         for (int i = 0; i < arr.length; i++) {
-            el = (arr[i] != 0) && (arr[i]%2 != 0) ? arr[i] + " ": "";
+            el = (arr[i] != 0) && (arr[i]%2 != 0) ? arr[i] + " ": ""; //according to Wiki, zero is an even number
             res += el;
         }
         if (res.length() != 0) {
@@ -80,13 +83,17 @@ public class HW3 {
         } catch (Exception e) {
             System.out.println("Something went wrong.");
         }
+
         System.out.println("Task 4");
+        //create list of products
         List <Product> products = Arrays.asList(
                 new Product("Milka whole hazelnut chocolate bar 270g", 5.49),
                 new Product("Milka Oreo Sandwich 92g", 2.19),
                 new Product("Milka Choco Cookies", 4.19),
                 new Product("Milka Funny Easter egg ladybug 50 g", 1.69));
+        //find max price
         double max = products.stream().mapToDouble(Product::getPrice).max().getAsDouble();
+        //select products with max price
         List<Product> result = products.stream()
                 .filter(product -> product.getPrice() == max)
                 .collect(Collectors.toList());

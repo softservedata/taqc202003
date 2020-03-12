@@ -27,17 +27,4 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return "Name = " + name + ", Price = " + price + " EUR";
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product)) return false;
-        Product product = (Product) o;
-        return Double.compare(product.price, price) == 0;
-    }
 }
