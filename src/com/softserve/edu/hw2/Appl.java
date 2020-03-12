@@ -7,6 +7,7 @@ public class Appl {
 
 	//If you do not want to change the var (Global.K ?)
 	private static int K = 16;
+	
     public static int getValK(){
         return K;
     }
