@@ -12,23 +12,24 @@ public class HW3 {
 
     //sort entered numbers in ascending order
     public static void sortNumbersAsc(double x, double y, double z) {
+        System.out.print("Numbers in ascending order: ");
         if (x >= y) {
             if ((x >= z)&&(y >= z)) {
-                System.out.println("Numbers in ascending order: " + z + " " + y + " " + x);
+                System.out.println(z + " " + y + " " + x);
             }
             else if ((x <= z)&&(y <= z)) {
-                System.out.println("Numbers in ascending order: " + y + " " + x + " " + z);
+                System.out.println(y + " " + x + " " + z);
             } else {
-                System.out.println("Numbers in ascending order: " + y + " " + z + " " + x);
+                System.out.println(y + " " + z + " " + x);
             }
         } else if (x < y) {
             if ((x <= z)&&(y <= z)) {
-                System.out.println("Numbers in ascending order: " + x + " " + y + " " + z);
+                System.out.println(x + " " + y + " " + z);
             }
             else if ((x <= z)&&(y >= z)) {
-                System.out.println("Numbers in ascending order: " + x + " " + z + " " + y);
+                System.out.println(x + " " + z + " " + y);
             } else {
-                System.out.println("Numbers in ascending order: " + z + " " + x + " " + y);
+                System.out.println(z + " " + x + " " + y);
             }
         }
     }
