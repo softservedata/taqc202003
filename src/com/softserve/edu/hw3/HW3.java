@@ -12,7 +12,6 @@ public class HW3 {
 
     //sort entered numbers in ascending order
     public static void sortNumbersAsc(double x, double y, double z) {
-        double max = 0.0;
         if (x >= y) {
             if ((x >= z)&&(y >= z)) {
                 System.out.println("Numbers in ascending order: " + z + " " + y + " " + x);
