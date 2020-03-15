@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Example {
 
 	public static void main(String[] args) {
-		System.out.println("My first program");
+		System.out.println("My first program!");
 		//
 		for (int i = 0; i < args.length; i++) {
 			System.out.println("argument i = " + i + "  value = " + args[i]);
@@ -59,7 +59,7 @@ public class Example {
 			System.out.print("d=");
 			d = sc.nextDouble();
 		} catch (Exception e) {
-			System.out.println("Scanner Error Found.");
+			System.out.println("Scanner Error Found!");
 			// e.printStackTrace();
 		}
 		System.out.println("a / d = " + (a / d));
