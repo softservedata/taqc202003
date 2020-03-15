@@ -10,9 +10,10 @@ public class Appl {
 
             System.out.println("++k= " + + (++k  ));
 
-            System.out.println("k+++k " + (k+++k  ));
+            System.out.println("k+++k=  " + (k+++k  ));
 
-           /* System.out.println("50---k " + (50---k  ));*/
+            int k1=50;
+            System.out.println("50---k= " + (k1---k ));
 
             System.out.println("k*k= " + (k*k  ));
 
