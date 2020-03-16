@@ -5,16 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ConditionsArray {
-    private static int a;
-    private static int b;
-    private static int f;
-    private static int g;
-    private static int k;
-    private static int l;
-    private static double c;
-    private static double d;
-    private static double e;
-    private static double tmp;
 
     public static void main(String[] args) {
         System.out.println("*** Home Work 3 ***");
@@ -22,9 +12,11 @@ public class ConditionsArray {
         int[] arrayInt = new int[2];
         Scanner scanner = new Scanner(System.in);
         try {
+            int a;
             System.out.print("Enter first number: ");
             a = scanner.nextInt();
             arrayInt[0] = a;
+            int b;
             System.out.print("Enter second number: ");
             b = scanner.nextInt();
             arrayInt[1] = b;
@@ -34,12 +26,15 @@ public class ConditionsArray {
             }
             double[] arrayDouble = new double[3];
             System.out.println("Task ---2---Sorting array ascending order-----");
+            double c;
             System.out.print("Enter first number: ");
             c = scanner.nextDouble();
             arrayDouble[0] = c;
+            double d;
             System.out.print("Enter second number: ");
             d = scanner.nextDouble();
             arrayDouble[1] = d;
+            double e;
             System.out.print("Enter third number: ");
             e = scanner.nextDouble();
             arrayDouble[2] = e;
@@ -59,15 +54,19 @@ public class ConditionsArray {
 
             System.out.println("Task ---3---Display only ood numbers -----");
             int[] intArrayTwo = new int[4];
+            int f;
             System.out.print("Enter first number: ");
             f = scanner.nextInt();
             intArrayTwo[0] = f;
+            int g;
             System.out.print("Enter second number: ");
             g = scanner.nextInt();
             intArrayTwo[1] = g;
+            int k;
             System.out.print("Enter third number: ");
             k = scanner.nextInt();
             intArrayTwo[2] = k;
+            int l;
             System.out.print("Enter forth number: ");
             l = scanner.nextInt();
             intArrayTwo[3] = l;
