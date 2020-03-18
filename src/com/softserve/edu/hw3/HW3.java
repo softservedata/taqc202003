@@ -1,13 +1,16 @@
 package com.softserve.edu.hw3;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class HW3 {
 
     //change order of entered numbers
     public static void swapNumbers(int i, int j) {
-        System.out.println("Swapped numbers: " + j + " " + i);
+        int n;
+        n = i;
+        i = j;
+        j = n;
+        System.out.println("Swapped numbers: " + i + " " + j);
     }
 
     //sort entered numbers in ascending order
@@ -35,12 +38,12 @@ public class HW3 {
     }
 
     //find odd numbers among the entered
-    public static void oddNumbers (int arr[]) {
+    public static void oddNumbers (int[] arr) {
         String res = "";
         String el;
         for (int i = 0; i < arr.length; i++) {
             el = (arr[i] != 0) && (arr[i]%2 != 0) ? arr[i] + " ": ""; //according to Wiki, zero is an even number
-            res += el;
+            res = res + el;
         }
         if (res.length() != 0) {
             System.out.println("Odd number(s): " + res);
@@ -78,7 +81,7 @@ public class HW3 {
             int c = sc.nextInt();
             System.out.print("d = ");
             int d = sc.nextInt();
-            int arr[] = {a, b, c, d};
+            int[] arr = {a, b, c, d};
             oddNumbers(arr);
         } catch (Exception e) {
             System.out.println("Something went wrong.");
@@ -86,17 +89,26 @@ public class HW3 {
 
         System.out.println("Task 4");
         //create list of products
-        List <Product> products = Arrays.asList(
+        Product[] products = {
                 new Product("Milka whole hazelnut chocolate bar 270g", 5.49),
-                new Product("Milka Oreo Sandwich 92g", 2.19),
-                new Product("Milka Choco Cookies", 4.19),
-                new Product("Milka Funny Easter egg ladybug 50 g", 1.69));
+                new Product("Milka Oreo Sandwich 92g", 4.19),
+                new Product("Milka Choco Cookies", 2.19),
+                new Product("Milka Funny Easter egg ladybug 50 g", 1.69)
+        };
         //find max price
-        double max = products.stream().mapToDouble(Product::getPrice).max().getAsDouble();
+        double max = 0;
+        for (Product product : products) {
+            if (product.getPrice() == max || product.getPrice() > max) {
+                max = product.getPrice();
+            }
+        }
         //select products with max price
-        List<Product> result = products.stream()
-                .filter(product -> product.getPrice() == max)
-                .collect(Collectors.toList());
-        System.out.print("Product(s) with max price: " + result);
+        System.out.println("Product(s) with max price:");
+
+        for (Product product : products) {
+            if (Objects.equals(product.getPrice(), max)) {
+                System.out.println(product.toString());
+            }
+        }
     }
 }

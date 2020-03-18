@@ -27,4 +27,22 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Product name = " + name + " Price = " + price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return Double.compare(product.price, price) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(price);
+    }
 }
