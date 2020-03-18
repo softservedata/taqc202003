@@ -73,10 +73,14 @@ public class HW4 {
         } catch(Exception e) {
                 System.out.println("Something went wrong.");
         }
-        for (Employee employee : employees) {
-            if (employee.getDepartment().equalsIgnoreCase(department)) {
-                System.out.println(employee.toString());
+        if (department.equalsIgnoreCase("Sales") || department.equalsIgnoreCase("IT") || department.equalsIgnoreCase("Marketing")) {
+            for (Employee employee : employees) {
+                if (employee.getDepartment().equalsIgnoreCase(department)) {
+                    System.out.println(employee.toString());
+                }
             }
+        } else {
+            System.out.println("Invalid department name.");
         }
     }
 }
