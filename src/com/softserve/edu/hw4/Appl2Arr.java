@@ -11,7 +11,7 @@ public class Appl2Arr {
 		int amount = 0;{
 			int sum =0;
 		for (int a = 0; a<arr.length; a++) {
-			if (a %2==0 ) { sum= sum +a ; }
+			if (a %2==0 ) { sum= sum +arr[a] ; }
 		}
 		System.out.println("Sum = "  +sum  );
 
