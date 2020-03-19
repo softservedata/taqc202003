@@ -77,9 +77,9 @@ class Employee {
 public class ApplEmployee {
 public static void main (String []args) {
 	Employee [] emps = new Employee [5];
-	emps[0]= new Employee ("Olena","Net");
+	emps[0]= new Employee ("Olena","NET");
 	emps[1]= new Employee ("Iryna","Shell");
-	emps[2]= new Employee ("Halyna","Net");
+	emps[2]= new Employee ("Halyna","NET");
 	emps[3]= new Employee ("Vika","RWS");
 	emps[4]= new Employee ("Milena","Reserve");
 	
