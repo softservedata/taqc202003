@@ -8,7 +8,7 @@ public class ApplArr {
 	for (int a = 0; a<arr.length; a++) {
 		if (a %2==0 ) { sum+= arr[a]; }
 	}
-	System.out.println("Sum = " + sum  );
+	System.out.println("Sum of values = " + sum  );
 
 }
 }
