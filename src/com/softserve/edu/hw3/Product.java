@@ -39,16 +39,56 @@ public class Product {
 			return false;
 		}	
 		Product other = (Product) obj;
-		if (name == null) {
-			if (other.name != null)
+		/*
+		 if (name == null) {
+		 if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
 		if (price != other.price)
 			return false;
-		return true;
+		*/
+		return getPrice() == other.getPrice();
 	}
 	
+@Override
+	public String toString() {
+		return "Product [name=" + name + ", price=" + price + "]";
+	}
 
+
+public static void main (String[] args) { 
+	Product st1 = new Product ("Sony", 999);
+	Product st2 = new Product ("Phillips", 999);
+	Product st3 = new Product ("LG", 125);
+	Product st4 = new Product ("Panasonic", 1000);
+
+	Product productMaxPrice = st1;
+	if (productMaxPrice.getPrice() < st2.getPrice()) {
+		productMaxPrice = st2;
+	}
+	if (productMaxPrice.getPrice() < st3.getPrice()) {
+		productMaxPrice = st3;
+	}
+	if (productMaxPrice.getPrice() < st4.getPrice()) {
+		productMaxPrice = st4;
+	}
+	if (productMaxPrice.equals(st2)) {
+		productMaxPrice = st1;
+		System.out.println("Max Price " + st1);
+	}
+	if (productMaxPrice.equals(st2)) {
+		productMaxPrice = st2;
+		System.out.println("Max Price " + st2);
+	}
+	if (productMaxPrice.equals(st3)) {
+		productMaxPrice = st3;
+		System.out.println("Max Price " + st3);
+	}
+	if (productMaxPrice.equals(st4)) {
+		productMaxPrice = st4;
+		System.out.println("Max Price " + st4);
+	}		
 	
+}
 }

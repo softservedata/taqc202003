@@ -27,7 +27,7 @@ public class Homework3 {
 	}  
  */
 	// Case2
-/*	
+/*-	
 	{
         	double x=0;
             double y=0;
@@ -80,10 +80,46 @@ public class Homework3 {
         	}
         	*/
 	//
-		Product st1 = new Product ("Sony", 125);
-		Product st2 = new Product ("Phillips", 100);
+		Product st1 = new Product ("Sony", 466);
+		Product st2 = new Product ("Phillips", 888);
 		Product st3 = new Product ("LG", 125);
 		Product st4 = new Product ("Panasonic", 55);
+	
+		Product productMaxPrice = st1;
+		if (productMaxPrice.getPrice() < st2.getPrice()) {
+			productMaxPrice = st2;
+		}
+		if (productMaxPrice.getPrice() < st3.getPrice()) {
+			productMaxPrice = st3;
+		}
+		if (productMaxPrice.getPrice() < st4.getPrice()) {
+			productMaxPrice = st4;
+		}
+		System.out.println("Product " + productMaxPrice.getName() + " " + productMaxPrice.getPrice());
+		
+		if (productMaxPrice.getPrice() < st4.getPrice()) {
+			productMaxPrice = st4;
+			System.out.println("Product " + st4.getName() + " " + st4.getPrice());
+		}
+		if (productMaxPrice.equals(st2)) {
+			productMaxPrice = st2;
+			System.out.println("Product " + st2.getName() + " " + st2.getPrice());
+		}
+		if (productMaxPrice.equals(st3)) {
+			productMaxPrice = st3;
+			System.out.println("Product " + st3.getName() + " " + st4.getPrice());
+		}
+		if (productMaxPrice.equals(st4)) {
+			productMaxPrice = st4;
+			System.out.println("Product " + st4.getName() + " " + st4.getPrice());
+		}		
+			
+		
+		
+		//System.out.print("The result is " + productMaxPrice.getName() + " " + productMaxPrice.getPrice() + " usd");
+		
+		//
+		/*-
 		if (st1.getPrice()>st2.getPrice()&&st1.getPrice()>st3.getPrice()&&st1.getPrice()>st4.getPrice()) {
 		    System.out.println(st1.getName() + " is the most expencive");
 		    return;
@@ -143,10 +179,13 @@ public class Homework3 {
 		if (st3.getPrice()==st4.getPrice()&&st3.getPrice()>st1.getPrice())  {
 		    System.out.println(st3.getName() + " and " + st4.getName() + " are the most expencive");    
 		    return;
-		    
+		    */
+	//
+		
+		
 	}
 }
-}
+
 
 
 
