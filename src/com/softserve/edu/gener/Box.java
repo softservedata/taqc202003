@@ -4,16 +4,19 @@ public class Box {
 
 	private Object data;
 
+	public Box() {
+	}
+
 	public Box(Object data) {
 		this.data = data;
 	}
 
-	public Object getData() {
+	public Object get() {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void set(Object data) {
 		this.data = data;
 	}
-	
+
 }
