@@ -1,5 +1,5 @@
 package com.softserve.edu.condition;
-
+/*
 public class Student {
 	private String name;
 	private int age;
@@ -63,3 +63,4 @@ public class Student {
 	}
 
 }
+*/
