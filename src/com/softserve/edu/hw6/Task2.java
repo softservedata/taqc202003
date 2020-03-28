@@ -10,8 +10,7 @@ public class Task2 {
 
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
-
-
+        
         int size1 = random.nextInt(10);
         int size2 = random.nextInt(10);
 
