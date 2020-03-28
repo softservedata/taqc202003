@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Task2 {
     private static String nicknameValidator(String s) {
-        String pattern = "^[A-Za-z0-9_]{3,15}";
+        String pattern = "[A-Za-z0-9_]{3,15}";
         String result;
 
         if(!s.isEmpty() && s.matches(pattern)) {
