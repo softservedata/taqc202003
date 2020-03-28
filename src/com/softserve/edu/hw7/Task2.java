@@ -1,9 +1,10 @@
 package com.softserve.edu.hw7;
+
 import java.util.*;
 
 public class Task2 {
     private static String nicknameValidator(String s) {
-        String pattern = "[A-Za-z0-9_]{3,15}";
+        String pattern = "\\w{3,15}"; //[a-zA-Z_0-9]
         String result;
 
         if(!s.isEmpty() && s.matches(pattern)) {
