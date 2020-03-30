@@ -11,5 +11,6 @@ public class Appl {
             nicknameReader.enterNames();
         }
         nicknameReader.getNicknameResult();
+        scanner.close();
     }
 }
