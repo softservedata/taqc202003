@@ -124,12 +124,12 @@ public class ApplStr {
 		//String pattern = "<[^>]+>";
 		//String pattern = ">[^<]+<";
 		//
-		String pattern = "password: [^ ]+ ";
+		//String pattern = "password: [^ ]+ ";
 		//
 		// String pattern = "(\\w)\\1";
 		// String pattern = "<([^>]+)>[^<]+</\\1>";
-		// String pattern = "\\w+(\\.\\w+)*@(\\w+\\.)+\\w{2,}";
-		//String pattern = "(\\d{1,3}[,'])*\\d{1,3}\\.\\d{2}";
+		//String pattern = "\\w+(\\.\\w+)*@(\\w+\\.)+\\w{2,}";
+		String pattern = "(\\d{1,3}[,'])*\\d{1,3}\\.\\d{2}";
 		//
 		//String text = "Now is the time";
 		//String text = "abc";
@@ -141,12 +141,12 @@ public class ApplStr {
 		// String text = "<div><b>Beginning with bold text</b> next, <span>text
 		// body,</span> <i>italic text</i> end of text.</div>";
 		//
-		String text = "login: mylogin password: MYSECTER^123+#? textext";
+		//String text = "login: mylogin password: MYSECTER^123+#? textext";
 		//
-		// String text = "abc.a_mm.b@gmail.com h@i.ua";
-		// String text = "abc.a_mm.b@gmail.com";
+		//String text = "abc.a_mm.b@gmail.com h@i.ua";
+		//String text = "abc.a_mm.b@gmail.com";
 		//
-		//String text = " 6 item(s) - $1'001,695.60 text";
+		String text = " 6 item(s) - $1'001,695.60 text";
 		//
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(text);
@@ -155,7 +155,7 @@ public class ApplStr {
 			System.out.println("m.matches() is true");
 		}
 		m.reset();
-		System.out.println("ORIGINAL TEXT: " + text);
+		//System.out.println("ORIGINAL TEXT: " + text);
 		String result = "";
 		while (m.find()) {
 			result = text.substring(m.start(), m.end());
@@ -173,10 +173,11 @@ public class ApplStr {
 		// String text2 = text.replaceAll(pattern, "_");
 		// System.out.println("modified text2: " + text2);
 		//
+		/*
 		System.out.println();
 		//String pattern = "password: [^ ]+ ";
 		text = text.replace(result, pattern.substring(0,pattern.length()-6));
 		System.out.println("UPDATED TEXT: " + text);
-		
+		*/
 	}
 }
