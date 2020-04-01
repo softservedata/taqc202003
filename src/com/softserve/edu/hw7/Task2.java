@@ -1,5 +1,6 @@
 package com.softserve.edu.hw7;
 
+import java.util.regex.*;
 import java.util.*;
 
 public class Task2 {
@@ -7,7 +8,10 @@ public class Task2 {
         String pattern = "\\w{3,15}"; //[a-zA-Z_0-9]
         String result;
 
-        if(!s.isEmpty() && s.matches(pattern)) {
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(s);
+
+        if(m.matches()) {
             result = "Valid nickname";
         } else {
             result = "Invalid nickname";
@@ -27,7 +31,6 @@ public class Task2 {
         for (String n: nicknames) {
             System.out.println(nicknameValidator(n) + " [" + n +"]");
         }
-
         /*
         Output:
         Invalid nickname [n1]
