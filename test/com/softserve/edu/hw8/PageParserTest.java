@@ -23,7 +23,7 @@ public class PageParserTest {
         Reader reader = new FileReader("src/com/softserve/edu/hw8/datahw8.json");
         JSONArray jsonObject = (JSONArray) parser.parse(reader);
         String newJson = jsonObject.toString();
-        actualResult = PageParser.parser(newJson);
+        actualResult = pageParser.parser(newJson);
         //
         Map<String, String> expectedResult = new HashMap<>();
         expectedResult.put("21291278", "Scaffolding");
