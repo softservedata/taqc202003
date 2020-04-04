@@ -1,6 +1,6 @@
-package com.softserve.edu.hw5;
+package com.softserve.edu.hw5.birds;
 
-public abstract class NonFlyingBird implements Bird{
+public abstract class NonFlyingBird implements Bird {
 
     @Override
     public void fly(){

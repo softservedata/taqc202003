@@ -1,6 +1,6 @@
-package com.softserve.edu.hw5;
+package com.softserve.edu.hw5.birds;
 
-public class BirdExecution {
+public class Execution {
 
     public static void main(String[] args) {
 
