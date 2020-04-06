@@ -18,19 +18,14 @@ public class MyTest {
             driver.manage().window().maximize();
             driver.get("https://softserve.academy/");
 
-            WebElement link, searchBox, submitBtn;
-
-            link = driver.findElement(By.linkText("Check your knowledge: tests/recommendations"));
             JavascriptExecutor exec = (JavascriptExecutor)driver;
-            exec.executeScript("arguments[0].click()", link);
+            exec.executeScript("arguments[0].click()", driver.findElement(By.linkText("Check your knowledge: tests/recommendations")));
 
-            searchBox = driver.findElement(By.name("q"));
-            searchBox.click();
-            searchBox.clear();
-            searchBox.sendKeys("Lviv");
+            driver.findElement(By.name("q")).click();
+            driver.findElement(By.name("q")).clear();
+            driver.findElement(By.name("q")).sendKeys("Lviv");
 
-            submitBtn = driver.findElement(By.cssSelector(".btn-secondary"));
-            submitBtn.click();
+            driver.findElement(By.cssSelector(".btn-secondary")).click();
 
             List<WebElement> searchResults = driver.findElements(By.xpath("//*[contains(@class,'coursebox')]"));
 
@@ -41,7 +36,6 @@ public class MyTest {
                     actual.add(each.getAttribute("data-courseid"));
                 }
             Collections.sort(actual);
-
             Assert.assertEquals(expected, actual);
 
             driver.quit();
