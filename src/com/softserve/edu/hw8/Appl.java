@@ -6,7 +6,7 @@ public class Appl {
     public static void main(String[] args) {
         JSONParser jsonParser = new JSONParser();
         String json = "{\n" +
-                "         \"id\":\"01\",\n" +
+                "         \"id\":01,\n" +
                 "         \"language\":\"Java\",\n" +
                 "         \"edition\":\"3rd\",\n" +
                 "         \"author\":\"Herbert Schildt\"\n" +

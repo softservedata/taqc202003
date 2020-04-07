@@ -5,7 +5,7 @@ import java.util.regex.*;
 
 public class JSONParser {
     static HashMap<String, String> parser(String json) {
-        String pattern = "\"(.*)\"(?::)\"(.*)\"";
+        String pattern = "\"([^\"]+)\":\"?([^\",}]+)\"?";
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(json);
         HashMap<String, String> result = new HashMap<>();
