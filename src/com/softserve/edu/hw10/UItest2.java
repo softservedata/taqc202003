@@ -82,9 +82,9 @@ public class UItest2 {
 		
 		List<WebElement> search = driver.findElements(By.cssSelector("div.caption a"));
 		int Macfound = 0;
-        for (WebElement each : search) {
-        	System.out.println("found:  " + each.getText()) ;
-        	if (each.getText().toLowerCase().contains("macbook")) {
+        for (WebElement elem : search) {
+        	System.out.println("found:  " + elem.getText()) ;
+        	if (elem.getText().toLowerCase().contains("macbook")) {
         		Macfound++;
     		}
         	
