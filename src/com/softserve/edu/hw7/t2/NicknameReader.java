@@ -41,9 +41,9 @@ public class NicknameReader {
                 Pattern pat = Pattern.compile(pattern);
                 Matcher matcher = pat.matcher(name);
                 if (matcher.matches()) {
-                    System.out.println("The nickname matches the pattern: " + name);
+                    System.out.println("Nickname matches the pattern: " + name);
                 } else {
-                    System.out.println("The nickname does not match the pattern: " + name);
+                    System.out.println("Nickname does not match the pattern: " + name);
                 }
             } else if (name.length() < 3) {
                 System.out.println("You entered too short nickname: " + name);

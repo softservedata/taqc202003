@@ -1,4 +1,4 @@
-package com.softserve.edu.hw9;
+package com.softserve.edu.hw8.hw9;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class AcademyTest {
     @Test
     public void ifSearchedElementsPresent() {
         System.out.println("---Homework 9---Search the element on hte page---");
-        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
