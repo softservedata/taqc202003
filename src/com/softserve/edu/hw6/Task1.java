@@ -13,7 +13,7 @@ class Student {
 			return o1.getName().compareTo(o2.getName());
 		}
 	}
-
+	
 	private String name;
 
 	public Student(String name) {
