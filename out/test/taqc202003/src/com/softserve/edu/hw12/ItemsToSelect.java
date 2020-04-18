@@ -10,9 +10,10 @@ public enum ItemsToSelect {
 
 
     private ItemsToSelect(String itemName) {
-        this.itemName=itemName;
+        this.itemName = itemName;
     }
-    public String getItemName(){
+
+    public String getItemName() {
         return itemName;
     }
 }

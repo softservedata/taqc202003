@@ -42,6 +42,7 @@ hs_err_pid*
 /.recommenders/
 /target/
 /bin/
+/out/
 /build/
 /doc/
 /lib/
@@ -63,6 +64,7 @@ hs_err_pid*
 /**/bin/
 /**/build/
 /**/lib/
+/**/out/
 /**/test-output/
 /**/allure-results/
 /**/report/

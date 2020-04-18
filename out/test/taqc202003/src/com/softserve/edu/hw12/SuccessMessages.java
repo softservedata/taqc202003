@@ -9,7 +9,7 @@ public class SuccessMessages {
 
     }
 
-    public String getFirstMessage(){
+    public String getFirstMessage() {
         return "Success: You have added %s to your shopping cart!";
     }
 }

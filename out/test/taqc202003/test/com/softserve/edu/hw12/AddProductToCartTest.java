@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AddProductToCartTest {
     private static WebDriver driver;
+
     @BeforeClass
     @Parameters(value = "implicitWait")
     public static void beforeClass(int time) {
@@ -32,13 +33,13 @@ public class AddProductToCartTest {
     @DataProvider
     public Object[][] selectItem() {
         return new Object[][]{
-                {ItemsToSelect.MACBOOK, ItemsToSelect.IPHONE, new NewItemCount( "2")},
+                {ItemsToSelect.MACBOOK, ItemsToSelect.IPHONE, new NewItemCount("2")},
 
         };
     }
 
     @Test(dataProvider = "selectItem")
-    public void ifProductsAddedToCart(ItemsToSelect macBookItem, ItemsToSelect iPhoneItem, NewItemCount expectedCount){
+    public void ifProductsAddedToCart(ItemsToSelect macBookItem, ItemsToSelect iPhoneItem, NewItemCount expectedCount) {
         String format = "Success: You have added %s to your shopping cart!";
         driver.findElement(By.xpath("//a[contains(text()," + macBookItem.getItemName() + ")]/ancestor::div[@class= 'product-thumb transition']//i[@class='fa fa-shopping-cart']")).click();
         String actualResultMacBook = driver.findElement(By.cssSelector(".alert.alert-success")).getText().trim();
@@ -69,7 +70,7 @@ public class AddProductToCartTest {
         String successMessage = driver.findElement(By.cssSelector(".fa.fa-check-circle")).getText().trim();
         Assert.assertTrue(driver.findElement(By.cssSelector(".fa.fa-check-circle")).isDisplayed(), "Success message is not present ");
         String value = driver.findElement(By.xpath("//div[@class='input-group btn-block']//following-sibling::input")).getAttribute("value");
-        Assert.assertEquals(value,expectedCount.getNewCount(), "New quantity is not changed to 2:");
+        Assert.assertEquals(value, expectedCount.getNewCount(), "New quantity is not changed to 2:");
         System.out.println(successMessage + " \nNew Quantity is: " + value);
 
     }
