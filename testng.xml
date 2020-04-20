@@ -8,11 +8,11 @@
 		<classes>
 			<class name="com.softserve.edu.AppTest" />
 			<!-- <class name="com.softserve.edu.AppTestReport" /> -->
-			<class name="com.softserve.edu.SearchNgTest">
-				<methods>
-					<include name="findByXPath" />
-				</methods>
-			</class>
+<!-- 			<class name="com.softserve.edu.SearchNgTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="findByXPath" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
 		</classes>
 	</test> <!-- Test -->
 

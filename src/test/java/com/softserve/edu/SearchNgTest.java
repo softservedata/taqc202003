@@ -7,6 +7,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -61,10 +63,12 @@ public class SearchNgTest {
 
 	@DataProvider
 	public Object[][] searchData() {
-		return new Object[][] { { Currencies.EURO, new SearchItem("mac") }, };
+		return new Object[][] {
+			{ Currencies.EURO, new SearchItem("mac") },
+		};
 	}
 
-	@Test(dataProvider = "searchData")
+	//@Test(dataProvider = "searchData")
 	public void findByXPath(Currencies currency, SearchItem searchItem) throws Exception {
 		System.out.println("\t\t@Test findByXPath()");
 		// Precondition
@@ -105,5 +109,67 @@ public class SearchNgTest {
 		// Return to Previous State
 		driver.findElement(By.xpath("//img[contains(@src, '/logo.png')]")).click();
 		Thread.sleep(1000); // For Presentation Only
+	}
+	
+	@Test
+	public void checkCart() throws Exception {
+		System.out.println("\t\t@Test checkCart()");
+		// Precondition
+		//
+		// Steps
+		// Add to Cart
+		driver.findElement(By.xpath("//h4/a[text()='MacBook']/../../following-sibling::div/button[contains(@onclick, 'cart.add')]")).click();
+		//Thread.sleep(1000); // For Presentation Only
+		//
+		// Check
+		WebElement alert = driver.findElement(By.xpath("//div[contains(@class, 'alert')]"));
+		Assert.assertTrue(alert.getAttribute("class").contains("success"));
+		Assert.assertTrue(alert.getText().contains("Success"));
+		Assert.assertTrue(alert.getText().contains("MacBook"));
+		Thread.sleep(4000); // For Presentation Only
+		//
+		// Steps
+		// Add to Cart
+		driver.findElement(By.xpath("//h4/a[text()='iPhone 3']/../../following-sibling::div/button[contains(@onclick, 'cart.add')]")).click();
+		//Thread.sleep(1000); // For Presentation Only
+		//
+		// /*-
+		driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		(new WebDriverWait(driver, 10))
+        	.until(ExpectedConditions.stalenessOf(alert));
+		WebElement alert1 = (new WebDriverWait(driver, 10))
+	        	.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'alert')]")));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		// */
+		//
+		// Check
+		//WebElement alert1 = driver.findElement(By.xpath("//div[contains(@class, 'alert')]"));
+		//Thread.sleep(1000); // For Presentation Only
+		System.out.println("alert.getText(): " + alert1.getText()); // Error, Element not present in DOM
+		Assert.assertTrue(alert1.getAttribute("class").contains("success"));
+		Assert.assertTrue(alert1.getText().contains("Success"));
+		Assert.assertTrue(alert1.getText().contains("iPhone 3"));
+		Thread.sleep(1000); // For Presentation Only
+		//
+		/*-
+		// Steps
+		// Goto Cart
+		driver.findElement(By.xpath("//div[@id='top-links']//a[contains(@href, 'route=checkout/cart')]")).click();
+		Thread.sleep(1000); // For Presentation Only
+		//
+		// Update Quantity
+		driver.findElement(By.xpath("//div[@id='content']//a[text()='MacBook']/../following-sibling::td//input")).click();
+		driver.findElement(By.xpath("//div[@id='content']//a[text()='MacBook']/../following-sibling::td//input")).clear();
+		driver.findElement(By.xpath("//div[@id='content']//a[text()='MacBook']/../following-sibling::td//input")).sendKeys("2");
+		Thread.sleep(1000); // For Presentation Only
+		//
+		// Update Button
+		driver.findElement(By.xpath("//div[@id='content']//a[text()='MacBook']/../following-sibling::td//button[@data-original-title='Update']")).click();
+		Thread.sleep(1000); // For Presentation Only
+		//
+		// Delete iPhone 3
+		driver.findElement(By.xpath("//div[@id='content']//a[text()='iPhone 3']/../following-sibling::td//button[@data-original-title='Remove']")).click();
+		Thread.sleep(4000); // For Presentation Only
+		*/
 	}
 }
