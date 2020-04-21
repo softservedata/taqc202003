@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Add to Cart Suite">
+
+    <test thread-count="5" name="Open website">
+        <classes>
+            <class name="com.softserve.edu.hw9.test.SoftServeAcademyTest" />
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Open Cart">
+        <classes>
+            <class name="com.softserve.edu.hw10.test.OpenCartTest" />
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Add to Cart">
+        <classes>
+            <class name="com.softserve.edu.hw11.test.AddToCartTest" />
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
