@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -126,7 +127,15 @@ public class SearchNgTest {
 		Assert.assertTrue(alert.getAttribute("class").contains("success"));
 		Assert.assertTrue(alert.getText().contains("Success"));
 		Assert.assertTrue(alert.getText().contains("MacBook"));
-		Thread.sleep(4000); // For Presentation Only
+		//Thread.sleep(4000); // For Presentation Only
+		//
+		/*-
+		WebElement iPhoneButtondriver = driver.findElement(By.xpath("//h4/a[text()='iPhone 3']/../../following-sibling::div/button[contains(@onclick, 'cart.add')]"));
+		Actions action = new Actions(driver);
+        action.moveToElement(iPhoneButtondriver).perform();
+        */
+		//
+		driver.navigate().refresh();
 		//
 		// Steps
 		// Add to Cart
