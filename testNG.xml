@@ -18,6 +18,13 @@
     <test name="Add to Cart">
         <classes>
             <class name="com.softserve.edu.hw11.test.AddToCartTest" />
+            <class name="com.softserve.edu.hw14.test.AddMacBookToCart" />
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Email service">
+        <classes>
+            <class name="com.softserve.edu.hw14.test.EmailServiceTest" />
         </classes>
     </test> <!-- Test -->
 

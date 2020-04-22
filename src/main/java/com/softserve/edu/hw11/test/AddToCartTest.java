@@ -51,10 +51,10 @@ public class AddToCartTest {
     @Test(dataProvider = "testData")
     public void addItemsToCart(String macAlertMessage, String iPhoneAlertMessage, String totalIPhonePrice) throws InterruptedException {
 
-        String macbookCartButton = "//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[1]";
-        String iPhoneCartButton = "//*[@id=\"content\"]/div[2]/div[2]/div/div[3]/button[1]";
+        String macbookCartButton = "//h4/a[text()='MacBook']/../../following-sibling::div/button[contains(@onclick,'cart.add')]";
+        String iPhoneCartButton = "//h4/a[text()='iPhone 3']/../../following-sibling::div/button[contains(@onclick,'cart.add')]";
         String alertAddedToCart = "//div[@class = 'alert alert-success']";
-        String cartButtonOnTheTopBar = "//*[@id='top-links']/ul/li[4]";
+        String cartButtonOnTheTopBar = "//div[@id='top-links']/ul/li[4]";
         String iPhoneInTheCart = "//a[text() ='iPhone 3']";
         String macBookInTheCart = "//a[text() ='MacBook']";
         String iPhoneQuantity = "//*[@id='content']/form/div/table/tbody/tr[1]/td[4]/div/input";
@@ -94,6 +94,7 @@ public class AddToCartTest {
         driver.findElement(By.xpath(iPhoneQuantity)).sendKeys("2");
 
         driver.findElement(By.xpath(refreshIphoneQuantity)).click();
+
         Thread.sleep(2000);
 
 // Check total iPhone price
