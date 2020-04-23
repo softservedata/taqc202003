@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +27,7 @@ import com.softserve.edu.opencart.data.SearchItem;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SearchNgTest {
+	public static final Logger logger = LoggerFactory.getLogger(Appl.class); // org.slf4j.LoggerFactory
 	private static WebDriver driver;
 
 	@BeforeSuite
@@ -69,9 +72,10 @@ public class SearchNgTest {
 		};
 	}
 
-	//@Test(dataProvider = "searchData")
+	@Test(dataProvider = "searchData")
 	public void findByXPath(Currencies currency, SearchItem searchItem) throws Exception {
 		System.out.println("\t\t@Test findByXPath()");
+		logger.info("start findByXPath(), currency = " + currency.toString() + " searchItem = " + searchItem);
 		// Precondition
 		// Choose Curency
 		driver.findElement(By.xpath("//button[@class='btn btn-link dropdown-toggle']")).click();
@@ -112,7 +116,7 @@ public class SearchNgTest {
 		Thread.sleep(1000); // For Presentation Only
 	}
 	
-	@Test
+	//@Test
 	public void checkCart() throws Exception {
 		System.out.println("\t\t@Test checkCart()");
 		// Precondition

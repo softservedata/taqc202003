@@ -13,4 +13,9 @@ public class SearchItem {
 		return searchText;
 	}
 
+	@Override
+	public String toString() {
+		return "SearchItem [searchText=" + searchText + "]";
+	}
+
 }

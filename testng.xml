@@ -6,7 +6,8 @@
 	<!-- 3 ERROR 5 WARNING 7 INFO 9 TRACE -->
 	<test name="TestLogin1" verbose="9">
 		<classes>
-			<class name="com.softserve.edu.AppTest" />
+<!-- 			<class name="com.softserve.edu.AppTest" /> -->
+			<class name="com.softserve.edu.ReportTestNG" />
 			<!-- <class name="com.softserve.edu.AppTestReport" /> -->
 <!-- 			<class name="com.softserve.edu.SearchNgTest"> -->
 <!-- 				<methods> -->
