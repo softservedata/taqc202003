@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1">
+	<parameter name="url" value="http://taqc-opencart.epizy.com/"/>
+	<parameter name="implicitWait" value="5"/>
+
+	<!-- 3 ERROR 5 WARNING 7 INFO 9 TRACE -->
+	<test name="TestHw14" >
+		<classes>
+<!--			 <class name="com.softserve.edu.AppTestReport" /> -->
+ 			<class name="com.softserve.edu.hw14.UkrNetTest"/>
+<!-- 				<methods> -->
+<!-- 					<include name="findByXPath" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Suite -->

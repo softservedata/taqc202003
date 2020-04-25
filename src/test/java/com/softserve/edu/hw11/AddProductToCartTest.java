@@ -1,5 +1,6 @@
 package com.softserve.edu.hw11;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.hamcrest.core.StringContains;
 import org.junit.*;
 import org.openqa.selenium.By;
@@ -18,7 +19,8 @@ public class AddProductToCartTest {
     @BeforeClass
     public static void beforeClass() {
         System.out.println("---Homework 11---");
-        System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -39,8 +41,13 @@ public class AddProductToCartTest {
         System.out.println(actualResultMacBook);
         driver.navigate().refresh();
         String iphone3 = "iPhone 3";
-        driver.findElement(By.xpath("//a[contains(text(),'iPhone 3')]/ancestor::div[@class= 'product-thumb transition']//i[@class='fa fa-shopping-cart']")).click();
+        driver.findElement(By.xpath("//h4/a[text()='iPhone 3']/../../following-sibling::div/button[contains(@onclick, 'cart.add')]")).click();
+//        driver.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+//        (new WebDriverWait(driver,10)).until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector(".alert.alert-success"))));
+//        (new WebDriverWait(driver,5)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".alert.alert-success")));
+//        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         String actualResultIphone3 = driver.findElement(By.cssSelector(".alert.alert-success")).getText();
+        System.out.println(actualResultIphone3);
         Assert.assertTrue("Iphone3 is not added to the shopping cart", actualResultIphone3.contains(String.format(format, iphone3)));
         System.out.println(actualResultIphone3);
         driver.navigate().refresh();
