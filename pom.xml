@@ -227,9 +227,9 @@
             </surefire.application.password>
           </systemPropertyVariables>
           <suiteXmlFiles>
-            <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
-             <suiteXmlFile>testng14.xml</suiteXmlFile>
-            <suiteXmlFile>testng13.xml</suiteXmlFile>
+            <suiteXmlFile>testng15.xml</suiteXmlFile>
+<!--             <suiteXmlFile>testng14.xml</suiteXmlFile>-->
+<!--            <suiteXmlFile>testng13.xml</suiteXmlFile>-->
           </suiteXmlFiles>
           <reportsDirectory>${testng.reports.directory}</reportsDirectory>
           <!-- <argLine> -->

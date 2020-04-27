@@ -8,6 +8,12 @@ public enum ItemsToSelect {
 
     private String itemName;
 
+    @Override
+    public String toString() {
+        return "ItemsToSelect{" +
+                "itemName='" + itemName + '\'' +
+                '}';
+    }
 
     private ItemsToSelect(String itemName) {
         this.itemName = itemName;
