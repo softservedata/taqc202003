@@ -2,18 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Suite1">
+	<parameter name="url" value="http://10.26.34.118/opencart/upload/" />
+	<parameter name="browsername" value="chrome" />
 
 	<!-- 3 ERROR 5 WARNING 7 INFO 9 TRACE -->
 	<test name="TestLogin1" verbose="9">
 		<classes>
-<!-- 			<class name="com.softserve.edu.AppTest" /> -->
-			<class name="com.softserve.edu.ReportTestNG" />
+			<!-- <class name="com.softserve.edu.AppTest" /> -->
+			<class name="com.softserve.edu.SearchAllureTest" />
+			<!-- <class name="com.softserve.edu.ReportTestNG" /> -->
 			<!-- <class name="com.softserve.edu.AppTestReport" /> -->
-<!-- 			<class name="com.softserve.edu.SearchNgTest"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="findByXPath" /> -->
-<!-- 				</methods> -->
-<!-- 			</class> -->
+			<!-- <class name="com.softserve.edu.SearchNgTest"> -->
+			<!-- <methods> -->
+			<!-- <include name="findByXPath" /> -->
+			<!-- </methods> -->
+			<!-- </class> -->
 		</classes>
 	</test> <!-- Test -->
 

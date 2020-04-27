@@ -37,6 +37,7 @@ hs_err_pid*
 
 # Single Module Project
 /.externalToolBuilders/
+/.allure/
 /.settings/
 /.metadata/
 /.recommenders/
