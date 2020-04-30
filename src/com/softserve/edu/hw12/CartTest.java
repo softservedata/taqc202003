@@ -16,7 +16,7 @@ public class CartTest {
     public static void setUpBeforeClass() throws Exception {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS) ;
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         driver.manage().window().maximize();
     }
 
@@ -63,7 +63,7 @@ public class CartTest {
         //Open Shopping Cart
         driver.findElement(By.xpath("//ul/li/a[@title='Shopping Cart']")).click();
 
-        //Check if added products are present in the Shopping Cart
+        //Check if added product is present in the Shopping Cart
         Assert.assertTrue(driver.findElement(By.xpath("//div[@id='content']//table/tbody/tr/td[@class='text-left']/a")).isDisplayed());
 
         System.out.println(product + " is successfully added to Cart");
